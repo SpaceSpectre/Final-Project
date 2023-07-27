@@ -1,0 +1,19 @@
+body
+{
+    background-color: rgb(5, 15, 32);
+}
+
+#bannerImg
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    transition: 12s ease-in-out;
+}
+
+#bannerImg:hover
+{
+    transform: rotateZ(18000deg) scale(2);
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+}
