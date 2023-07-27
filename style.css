@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 body
 {
+    font-family: 'Roboto Condensed', sans-serif;
     background-color: rgb(5, 15, 32);
 }
 
@@ -19,6 +22,41 @@ body
 
 #bannerImg:hover
 {
-    transform: rotateZ(18000deg) scale(2);
+    transform: rotateZ(18000deg) scale(1.5);
     filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+}
+
+.flex
+{
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.logo
+{
+    margin: 0.5rem;
+}
+
+.primary-header
+{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.primary-navigation
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-navigation a
+{
+    text-decoration: none;
+}
+
+.primary-navigation a > [aria-hidden="true"]
+{
+    font-weight: 700;
+    margin-inline-end: 0.75em;
 }
