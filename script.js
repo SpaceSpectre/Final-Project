@@ -1,14 +1,17 @@
-bannerImg = document.getElementById("bannerImg");
+const primaryNav = document.querySelector(".primary-navigation");
+const navToggle =  document.querySelector(".mobile-nav-toggle");
 
-var counter = 1;
-setInterval(myMethod, 3000);
-
-function myMethod()
-{
-    bannerImg.src = `images/cccircular_${counter}.svg`;
-    counter++;
-    if(counter > 6)
+navToggle.addEventListener("click", () => {
+    const visibilty = primaryNav.getAttribute("data-visible");
+    
+    if(visibilty === "false")
     {
-        counter = 0;
+        primaryNav.setAttribute("data-visible", true);
+        navToggle.setAttribute("aria-expanded", true);
     }
-}
+    else if(visibilty === "true")
+    {
+        primaryNav.setAttribute("data-visible", false);
+        navToggle.setAttribute("aria-expanded", false);
+    }
+});
